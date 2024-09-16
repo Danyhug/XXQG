@@ -1,0 +1,236 @@
+* {
+	padding: 0;
+	margin: 0;
+}
+
+@font-face {
+	font-family: 'MyFont';
+	src: url('mi.ttf')
+}
+
+body {
+	font-family: "MyFont";
+	font-size: 16px;
+}
+
+.nav {
+	img {
+		width: 100%;
+	}
+}
+
+header {
+	height: 45px;
+	line-height: 45px;
+
+	.left {
+		float: left;
+
+		img {
+			width: 45px;
+			height: 45px;
+		}
+
+	}
+
+	.title {
+		text-align: center;
+		font-size: 1.4em;
+	}
+}
+
+main {
+	height: 300px;
+	background-color: rgb(250, 252, 251);
+
+	ul {
+		width: 100%;
+		display: flex;
+		justify-content: flex-start;
+		height: 100%;
+		list-style: none;
+		text-align: center;
+
+		li {
+			display: flex;
+			flex-direction: column;
+
+			width: 60px;
+			height: inherit;
+			padding: 0 12px;
+			padding-top: 12px;
+
+			.date {
+				height: 50%;
+			}
+
+			.chat {
+				height: 50%;
+				border-radius: 4px;
+				border-bottom-left-radius: 0;
+				border-bottom-right-radius: 0;
+				background-image: linear-gradient(to bottom, rgb(251, 211, 209), rgb(249, 228, 211));
+
+				.score {
+					position: relative;
+					top: -18%;
+				}
+			}
+		}
+	}
+
+	.now {
+		color: rgb(215, 43, 30);
+		font-size: 600;
+		background-color: rgb(251, 241, 240);
+
+		.date {
+			color: rgb(215, 43, 30);
+			font-size: 1.1em;
+			font-weight: 600;
+		}
+
+		.chat {
+			background-image: linear-gradient(to bottom, rgb(253, 56, 47), rgb(245, 129, 44));
+		}
+
+		.score {
+			font-size: 1.1em;
+			font-weight: bold;
+		}
+	}
+}
+
+.my-info {
+	margin: 65px 16px 30px;
+	display: flex;
+
+	.left {
+		width: 65%;
+		display: flex;
+
+		.left-container {
+			display: flex;
+
+			.tx {
+				margin: 0 12px;
+				margin-left: 0;
+				width: 45px;
+				height: 45px;
+				line-height: 45px;
+				text-align: center;
+				color: #fff;
+				font-size: 1em;
+				border-radius: 50%;
+				background-color: rgb(0, 127, 255);
+			}
+
+			.left-container-right {
+				height: 45px;
+				display: flex;
+				flex-direction: column;
+				justify-content: space-around;
+
+				.name {
+					font-size: 1.3em;
+					font-weight: bold;
+					color: #333;
+				}
+
+				.date {
+					font-size: 1.01em;
+					color: rgb(171, 179, 185);
+				}
+			}
+		}
+	}
+
+	.right {
+		text-align: right;
+		width: 35%;
+
+		.now-score {
+			font-size: 1.2em;
+			font-weight: 600;
+			color: rgb(228, 36, 23);
+
+			span {
+				font-size: 1.3em;
+			}
+		}
+
+		.year-score {
+			color: rgb(9, 117, 232);
+			font-weight: bold;
+
+			img {
+				width: 18px;
+				height: 18px;
+				vertical-align: middle;
+			}
+		}
+	}
+}
+
+footer {
+	padding: 0 16px;
+
+	ul {
+		list-style: none;
+
+		li::before {
+			position: absolute;
+			top: 0;
+			left: 0;
+			background-color: rgb(242, 243, 245);
+			content: "";
+			width: 14px;
+			height: 14px;
+			border-radius: 50%;
+			display: block;
+		}
+
+		li::after {
+			position: absolute;
+			top: 0px;
+			left: 5px;
+			width: 2px;
+			height: 100%;
+			background-color: rgb(242, 243, 245);
+			content: "";
+			display: block;
+		}
+
+		li {
+			height: 100px;
+			line-height: 100px;
+			/* background-color: green; */
+			padding-left: 26px;
+			position: relative;
+			font-size: 1.1em;
+
+			.time {
+				position: absolute;
+				top: -42px;
+				color: rgb(170, 179, 186);
+			}
+
+			.container {
+				display: flex;
+				justify-content: space-between;
+				font-size: 1.2em;
+
+				.score {
+					text-align: right;
+					font-weight: bold;
+					color: rgb(228, 36, 23);
+
+					span {
+						font-weight: normal;
+						font-size: .8em;
+					}
+				}
+			}
+		}
+	}
+}
